@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="438.0" prefWidth="895.0" style="-fx-background-color: #303b2d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shventurecapital.bebtea.controllers.AdminController">
+   <children>
+      <Label layoutX="14.0" layoutY="139.0" text="Your parcels" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="180.0" prefHeight="258.0" prefWidth="895.0" style="-fx-background-color: #6dd038;">
+         <children>
+            <Button fx:id="btDelete" layoutX="369.0" layoutY="209.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="23.0" prefWidth="69.0" style="-fx-background-color: #e1b529;" text="Delete" />
+            <Button fx:id="save" layoutX="732.0" layoutY="209.0" mnemonicParsing="false" onAction="#saveUser" style="-fx-background-color: #a1ef84;" text="Update" />
+            <ChoiceBox fx:id="status" layoutX="555.0" layoutY="209.0" prefWidth="150.0" style="-fx-background-color: #a1ef84;" />
+            <TableView fx:id="orderTable" layoutX="20.0" layoutY="11.0" prefHeight="189.0" prefWidth="854.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="134.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="186.0" text="Address" />
+                  <TableColumn fx:id="colFlavor" minWidth="0.0" prefWidth="113.0" text="Flavor" />
+                  <TableColumn fx:id="colSize" prefWidth="72.0" text="Size" />
+                  <TableColumn fx:id="colQuantity" prefWidth="63.0" text="Quantity" />
+                  <TableColumn fx:id="colAmount" prefWidth="98.0" text="Amount" />
+                  <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+                  <TableColumn fx:id="colEdit" prefWidth="75.0" text="Edit" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="363.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/supply.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="260.0" layoutX="493.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="440.0" layoutY="24.0" text="Label" />
+      <Label layoutX="453.0" layoutY="38.0" text="Label" />
+      <Label fx:id="orderId" layoutX="426.0" layoutY="30.0" text="Label" />
+      <Button fx:id="btSupply" layoutX="798.0" layoutY="144.0" mnemonicParsing="false" onAction="#openSupply" style="-fx-background-color: #f9ff7d;" text="Supply" />
+      <Button fx:id="btOrder" layoutX="801.0" layoutY="20.0" mnemonicParsing="false" onAction="#openOrder" style="-fx-background-color: #f9ff7d;" text="Order" />
+   </children>
+</AnchorPane>
